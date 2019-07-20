@@ -30,10 +30,18 @@ client.on("message", async message => {
     const sayMessage = args.join(" ");
     if (args.length > 0) {
       var x = rng(0, 100);
-      message.reply("you rolled " + x + "for \"" + sayMessage + "\"");
+      message.reply("you rolled " + x + " for \"" + sayMessage + "\"");
     }else {
       var x = rng(0, 100);
       message.reply("you rolled " + x);
+    }
+  }
+  if (command === "dogs") {
+    const sayMessage = args.join(" ");
+    if (sayMessage.toLowerCase() === "i like dogs" || sayMessage.toLowerCase() === "i love dogs" ) {
+      message.channel.send("Nice.");
+    }else {
+      message.reply("I don't really care);
     }
   }
 });
