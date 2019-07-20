@@ -50,11 +50,11 @@ client.on("message", async message => {
       var msg1 = ["rock", "paper", "scissors"];
       var cpu = rng(1, 3);
       if (cpu == 1 && player == "rock" || cpu == 2 && player == "paper" || cpu == 3 && player == "scissors") {
-        message.channel.send("I play " + msg1[cpu - 1] + ", it's a tie!");
+        message.channel.send("I play " + msg1[cpu] + ", it's a tie!");
       }else if (cpu == 2 && player == "rock" || cpu == 3 && player == "paper" || cpu == 1 && player == "scissors") {
-        message.channel.send("I play " + msg1[cpu - 1] + ", I win!");
+        message.channel.send("I play " + msg1[cpu] + ", I win!");
       }else if (cpu == 3 && player == "rock" || cpu == 1 && player == "paper" || cpu == 2 && player == "scissors") {
-        message.channel.send("I play " + msg1[cpu - 1] + ", you win!");
+        message.channel.send("I play " + msg1[cpu] + ", you win!");
        }
     }else {
       message.reply("Say l!rps followed by either :black_circle: :page_facing_up: or :scissors: to play");
