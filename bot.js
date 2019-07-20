@@ -27,8 +27,14 @@ client.on("message", async message => {
     message.reply("Follow me on Twitch, sub to me on YouTube :) https://www.twitch.tv/motorjam https://www.youtube.com/channel/UC93SMdJJOHf8tcF-PJ_ArxA");
   }
   if (command === "roll") {
-    var x = rng(0, 100);
-    message.reply("You rolled " + x);
+    const sayMessage = args.join(" ");
+    if (args.length > 0) {
+      var x = rng(0, 100);
+      message.reply("you rolled " + x + "for \"" + sayMessage + "\"");
+    }else {
+      var x = rng(0, 100);
+      message.reply("you rolled " + x);
+    }
   }
 });
 
