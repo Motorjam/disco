@@ -45,9 +45,9 @@ client.on("message", async message => {
     }
   }
   if (command === "rps") {
+    var msg1 = ["rock", "paper", "scissors"];
     const player = args.join("");
     if (player === "rock" || player === "paper" || player === "scissors") {
-      var msg1 = ["rock", "paper", "scissors"];
       var cpu = rng(1, 3);
       if (cpu == 1 && player == "rock" || cpu == 2 && player == "paper" || cpu == 3 && player == "scissors") {
         message.channel.send("I play " + msg1[cpu] + ", it's a tie!");
@@ -57,7 +57,7 @@ client.on("message", async message => {
         message.channel.send("I play " + msg1[cpu] + ", you win!");
        }
     }else {
-      message.reply("Say l!rps followed by either :black_circle: :page_facing_up: or :scissors: to play");
+      message.reply("Say l!rps followed by either " + msg1[0] + " " + msg1[1] + " or " + msg1[2] + " to play");
     }
   }
 });
