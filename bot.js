@@ -47,7 +47,15 @@ client.on("message", async message => {
   if (command === "rps") {
     const player = args.join("");
     if (player === "rock" || player === "paper" || player === "scissors") {
-      message.channel.send("Nice.");
+      var msg1 = ["rock", "paper", "scissors"];
+      var throw = rng(1, 3);
+      if (throw == 1 && player == "rock" || throw == 2 && player == "paper" || throw == 3 && player == "scissors") {
+        message.channel.send("I play " + msg1[throw - 1] + ", it's a tie!");
+      }else if (throw == 2 && player == "rock" || throw == 3 && player == "paper" || throw == 1 && player == "scissors") {
+        message.channel.send("I play " + msg1[throw - 1] + ", I win!");
+      }else if (throw == 3 && player == "rock" || throw == 1 && player == "paper" || throw == 2 && player == "scissors") {
+        message.channel.send("I play " + msg1[throw - 1] + ", you win!");
+       }
     }else {
       message.reply("Say l!rps followed by either :black_circle: :page_facing_up: or :scissors: to play");
     }
