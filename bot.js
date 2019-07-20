@@ -44,6 +44,12 @@ client.on("message", async message => {
       message.reply("I don't really care");
     }
   }
+  if (command === "rps") {
+    const player = args.join(" ");
+    if (player !== ":black_circle:" || player !== ":page_facing_up:" || player !== ":scissors:") {
+      message.reply("Say l!rps followed by either :black_circle: :page_facing_up: or :scissors: to play");
+    }
+  }
 });
 
 client.login(process.env.BOT_TOKEN);
