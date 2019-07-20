@@ -48,13 +48,13 @@ client.on("message", async message => {
     const player = args.join("");
     if (player === "rock" || player === "paper" || player === "scissors") {
       var msg1 = ["rock", "paper", "scissors"];
-      var throw = rng(1, 3);
-      if (throw == 1 && player == "rock" || throw == 2 && player == "paper" || throw == 3 && player == "scissors") {
-        message.channel.send("I play " + msg1[throw - 1] + ", it's a tie!");
-      }else if (throw == 2 && player == "rock" || throw == 3 && player == "paper" || throw == 1 && player == "scissors") {
-        message.channel.send("I play " + msg1[throw - 1] + ", I win!");
-      }else if (throw == 3 && player == "rock" || throw == 1 && player == "paper" || throw == 2 && player == "scissors") {
-        message.channel.send("I play " + msg1[throw - 1] + ", you win!");
+      var cpu = rng(1, 3);
+      if (cpu == 1 && player == "rock" || cpu == 2 && player == "paper" || cpu == 3 && player == "scissors") {
+        message.channel.send("I play " + msg1[cpu - 1] + ", it's a tie!");
+      }else if (cpu == 2 && player == "rock" || cpu == 3 && player == "paper" || cpu == 1 && player == "scissors") {
+        message.channel.send("I play " + msg1[cpu - 1] + ", I win!");
+      }else if (cpu == 3 && player == "rock" || cpu == 1 && player == "paper" || cpu == 2 && player == "scissors") {
+        message.channel.send("I play " + msg1[cpu - 1] + ", you win!");
        }
     }else {
       message.reply("Say l!rps followed by either :black_circle: :page_facing_up: or :scissors: to play");
