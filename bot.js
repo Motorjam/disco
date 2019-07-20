@@ -30,11 +30,6 @@ client.on("message", async message => {
     var x = rng(0, 100);
     message.reply("You rolled " + x);
   }
-  if (command === "rps") {
-    if (args !== ":black_circle:"||":page_facing_up:"||":scissors:") {
-      message.reply("Say l!rps followed by either :black_circle: :page_facing_up: or :scissors: to play);
-    }
-  }
 });
 
 client.login(process.env.BOT_TOKEN);
