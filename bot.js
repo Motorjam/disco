@@ -48,12 +48,12 @@ client.on("message", async message => {
     var msg1 = ["rock", "paper", "scissors"];
     const player = args.join("");
     if (player === "rock" || player === "paper" || player === "scissors") {
-      var cpu = rng(1, 3);
-      if (cpu == 1 && player == "rock" || cpu == 2 && player == "paper" || cpu == 3 && player == "scissors") {
+      var cpu = rng(0, 2);
+      if (cpu == 0 && player == "rock" || cpu == 1 && player == "paper" || cpu == 2 && player == "scissors") {
         message.channel.send("I play " + msg1[cpu] + ", it's a tie!");
-      }else if (cpu == 2 && player == "rock" || cpu == 3 && player == "paper" || cpu == 1 && player == "scissors") {
+      }else if (cpu == 1 && player == "rock" || cpu == 2 && player == "paper" || cpu == 0 && player == "scissors") {
         message.channel.send("I play " + msg1[cpu] + ", I win!");
-      }else if (cpu == 3 && player == "rock" || cpu == 1 && player == "paper" || cpu == 2 && player == "scissors") {
+      }else if (cpu == 2 && player == "rock" || cpu == 0 && player == "paper" || cpu == 1 && player == "scissors") {
         message.channel.send("I play " + msg1[cpu] + ", you win!");
        }
     }else {
