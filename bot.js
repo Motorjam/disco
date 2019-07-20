@@ -46,9 +46,10 @@ client.on("message", async message => {
   }
   if (command === "rps") {
     const player = args.join(" ");
-    if (player !== "rock" || player !== "paper" || player !== "scissors") {
+    if (player === ":black_circle:" || player === ":page_facing_up:" || player === ":scissors:") {
+      message.channel.send("Nice.");
+    }else {
       message.reply("Say l!rps followed by either :black_circle: :page_facing_up: or :scissors: to play");
-    }
   }
 });
 
