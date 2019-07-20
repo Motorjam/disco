@@ -38,10 +38,10 @@ client.on("message", async message => {
   }
   if (command === "dogs") {
     const sayMessage = args.join(" ");
-    if (sayMessage.toLowerCase() === "i like dogs" || sayMessage.toLowerCase() === "i love dogs" ) {
+    if (sayMessage.toLowerCase() === "i like dogs" || sayMessage.toLowerCase() === "i love dogs") {
       message.channel.send("Nice.");
     }else {
-      message.reply("I don't really care);
+      message.reply("I don't really care");
     }
   }
 });
