@@ -56,6 +56,8 @@ client.on("message", async message => {
       }else if (cpu == 2 && player == "rock" || cpu == 0 && player == "paper" || cpu == 1 && player == "scissors") {
         message.channel.send("I play " + msg1[cpu] + ", you win!");
        }
+    }else if (player === "gun") {
+      message.reply("why are you gay?");
     }else {
       message.reply("Say l!rps followed by either " + msg1[0] + " " + msg1[1] + " or " + msg1[2] + " to play");
     }
