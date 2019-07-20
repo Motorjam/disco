@@ -26,7 +26,10 @@ client.on("message", async message => {
   if (command === "plug") {
     message.reply("Follow me on Twitch, sub to me on YouTube :) https://www.twitch.tv/motorjam https://www.youtube.com/channel/UC93SMdJJOHf8tcF-PJ_ArxA");
   }
-
+  if (command === "roll") {
+    var x = rng(0, 100);
+    message.reply("You rolled " + x);
+  }
 });
 
 client.login(process.env.BOT_TOKEN);
