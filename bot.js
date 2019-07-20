@@ -48,7 +48,7 @@ client.on("message", async message => {
     var msg1 = ["rock", "paper", "scissors"];
     const player = args.join("");
     if (player === "rock" || player === "paper" || player === "scissors") {
-      var cpu = rng(0, 2);
+      var cpu = rng(0, 3);
       if (cpu == 0 && player == "rock" || cpu == 1 && player == "paper" || cpu == 2 && player == "scissors") {
         message.channel.send("I play " + msg1[cpu] + ", it's a tie!");
       }else if (cpu == 1 && player == "rock" || cpu == 2 && player == "paper" || cpu == 0 && player == "scissors") {
